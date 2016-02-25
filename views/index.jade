@@ -1,0 +1,23 @@
+extend layout
+
+block content
+    .container-fluid.main(style='height: 100%;')
+      div(style='margin-bottom:100px')
+      .row
+        .col-md-3.col-xs-3.col-sm-3
+        .col-md-6.col-xs-6.col-sm-6
+          each thing in data
+           .list-group
+              .list-group-item
+                .row-picture
+                  img.circle(src='#{thing.url}', alt='icon')
+                .row-content
+                  h4.list-group-item-heading 
+                    a(href='./artist/#{thing.id}') #{thing.fc}
+                    ul
+                      li #{thing.date}
+                      li Gender #{thing.gender}
+                      li Number Of Works #{thing.totalWorks}
+              .list-group-separator
+
+        .col-md-6.col-xs-6.col-sm-6

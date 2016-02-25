@@ -1,0 +1,14 @@
+
+extend layout
+
+block content
+    .container-fluid.main(style='height: 100%;')
+      div(style='margin-bottom:100px')
+      .row
+        .col-md-3.col-xs-3.col-sm-3
+        .col-md-6.col-xs-6.col-sm-6
+          h1= message
+          h2= error.status
+          p  #{error.stack}
+
+        .col-md-6.col-xs-6.col-sm-6

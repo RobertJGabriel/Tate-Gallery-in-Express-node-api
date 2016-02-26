@@ -16,5 +16,16 @@ block content
                     ul
                      // li Gender #{thing.groupTitle}
               .list-group-separator
+          each thing2 in data2
+           .list-group
+              .list-group-item
+                .row-picture
+                  img.circle(src='#{thing2.fc}', alt='icon')
+                .row-content
+                  h4.list-group-item-heading               
+                    a(href='/artist/#{thing2.id}') #{thing2.fc}
+                    ul
+                     // li Gender #{thing.groupTitle}
+              .list-group-separator
 
         .col-md-6.col-xs-6.col-sm-6

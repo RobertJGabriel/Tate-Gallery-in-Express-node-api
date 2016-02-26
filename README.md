@@ -22,6 +22,6 @@ A complete sample project for Front-End developers teaching the basics of REST a
 
 ## import
 
-1. mongod --dbpath /Users/robertgabriel/Documents/College/Advanced_Javascript/AssessmentOne/tategallery/data 
-2. mongoimport --db assesstment --collection artworks --drop --file /Users/robertgabriel/Documents/College/Advanced_Javascript/AssessmentOne/tategallery/public/json/artworks.json
-3. mongoimport --db assesstment --collection artworks --drop --file /Users/robertgabriel/Documents/College/Advanced_Javascript/AssessmentOne/tategallery/public/json/artworks.json
+1. mongod --dbpath /Users/robertgabriel/Documents/College/Advanced_Javascript/tategallery/data 
+2. mongoimport --db assesstment --collection artworks --drop --file /Users/robertgabriel/Documents/College/Advanced_Javascript/tategallery/public/json/artworks.json
+3. mongoimport --db assesstment --collection artworks --drop --file /Users/robertgabriel/Documents/College/Advanced_Javascript/tategallery/public/json/artworks.json

@@ -21,6 +21,10 @@ node_modules
 
 # Coveralls
 coverage
-
+data/
+data/
+data/*
+data/*.*
 # Benchmarking
 benchmarks/graphs
+data/journal/WiredTigerPreplog.0000000001

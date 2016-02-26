@@ -7,15 +7,10 @@ block content
         .col-md-3.col-xs-3.col-sm-3
         .col-md-6.col-xs-6.col-sm-6
           each thing in data
-           .list-group
-              .list-group-item
-                .row-picture
-                  img.circle(src='#{thing.thumbnailUrl}', alt='icon')
-                .row-content
-                  h4.list-group-item-heading 
-                    a(href='artworks/#{thing.id}') #{thing.title}
-                    ul
-                     // li Gender #{thing.groupTitle}
-              .list-group-separator
+            .panel.panel-default
+              .panel-heading 
+                a(href='artworks/#{thing.id}') #{thing.title}
+                .panel-body
+                   img.circle(src='#{thing.thumbnailUrl}', alt='icon')
 
         .col-md-6.col-xs-6.col-sm-6

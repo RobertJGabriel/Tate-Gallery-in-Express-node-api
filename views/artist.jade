@@ -19,5 +19,15 @@ block content
                       li Gender #{thing.gender}
                       li Number Of Works #{thing.totalWorks}
               .list-group-separator
+           h4 artwork
+          each thing2 in data2
+           .list-group
+              .list-group-item
+                .row-picture
+                  img.circle(src='#{thing2.thumbnailUrl}', alt='icon')
+                .row-content
+                  a(href='/artworks/#{thing2.id}') #{thing2.title}
+    
+              .list-group-separator
 
         .col-md-6.col-xs-6.col-sm-6

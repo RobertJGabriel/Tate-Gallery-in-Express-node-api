@@ -9,7 +9,7 @@ var router = express.Router();
 router.get('/', function (req, res) {
     var db = req.db;
     var collection = db.get('artworks');
-    var limitArtwork = 40;
+    var limitArtwork = 100;
     collection.find({}, {
         limit: limitArtwork
     }, function (e, docs) {
@@ -33,6 +33,23 @@ router.get('/:id', function (req, res) {
     });
 });
 
+
+//joins here
+router.get('/findartist/:id', function (req, res) {
+    console.log(req.params.id);
+    var artworkId = req.params.id;
+    var db = req.db;
+    var collection = db.get('artworks');
+    collection.find({
+        contributors: {
+            $elemMatch: {
+                id: parseInt(artworkId)
+            }
+        }
+    }, function (e, docs) {
+        res.json(docs);
+    });
+});
 
 
 module.exports = router;

@@ -29,7 +29,7 @@ router.get('/', function (req, res) {
         }
     ], function (err, artist, artwork) {
         res.render('index', {
-            title: "home",
+            title: "Tate Gallery",
             artists: artist,
             artworks: artwork
         })

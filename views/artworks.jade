@@ -1,17 +1,16 @@
 extend layout
 
 block content
-    .container-fluid.main(style='height: 100%;')
-      div(style='margin-bottom:100px')
-      .row
-        .col-md-4.col-xs-4.col-sm-4
-        .col-md-4.col-xs-4.col-sm-4
-          each thing in data
-            .panel.panel-default
-               .panel-body
-                 img.circle(src='#{thing.thumbnailUrl}', alt='icon')
-               .panel-footer
-                 a(href='artworks/#{thing.id}')  
-                   h4 #{thing.title}
-
-        .col-md-4.col-xs-4.col-sm-4
+    // Page Content
+    .container(style='height: 100%;margin-top:100px')
+      each thing in data
+        .row(style='margin-bottom:40px;margin-top:40px')
+          .col-md-7
+            a(href='#')
+              img.img-responsive(src='#{thing.thumbnailUrl}', alt='')
+          .col-md-5
+            h3 #{thing.title}
+            h4 #{thing.dimensions}
+            p  #{thing.creditLine}
+            a.btn.btn-primary(href='./artworks/#{thing.id}')
+              | View Artwork

@@ -8,9 +8,11 @@ var router = express.Router();
 router.get('/', function (req, res) {
     var db = req.db;
     var collection = db.get('artists');
-    var limitArtists = 40;
+    var limitArtists = 10;
+
     collection.find({}, {
-        limit: limitArtists
+        limit: limitArtists,
+        skip: Math.random()
     }, function (e, docs) {
         res.json(docs);
     });

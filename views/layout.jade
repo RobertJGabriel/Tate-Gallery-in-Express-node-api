@@ -8,7 +8,7 @@ html(style='min-height: 100%;position: relative;')
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   body
-    .navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+    .navbar.navbar-warning.navbar-fixed-top(role='navigation')
       .container-fluid
         .navbar-header
           button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-responsive-collapse')
@@ -16,35 +16,28 @@ html(style='min-height: 100%;position: relative;')
             span.icon-bar
             span.icon-bar
           a.navbar-brand(href='/')
-            .logo(style='height:100%')
-              img(src='/img/logo.png', style='height:100%')
+           Tate Gallery
         .navbar-collapse.collapse.navbar-responsive-collapse
           form.navbar-form.navbar-left
             .form-group
               input.form-control.col-md-8(type='text', name="gamerTag", placeholder='Search')
           ul.nav.navbar-nav.navbar-right
             li
-              a(href='/artists') Artist
+              a(href='/artists') Artists
             li
-              a(href='/artworks') Artwork
+              a(href='/artworks') Artworks
 
     .container(style='min-height: 100vh;')
       block content
     footer.footer
       .row(style='margin-left:0px;margin-right:0px;')
         .col-md-4.col-sm-4
-          h5 About
-          ul.nav.nav-pills.nav-stacked(style='max-width: 300px;')
-            li.active
-              a(href='/') Home
-            li
-              a(href='/artists') Artist
-            li
-              a(href='/artworks') Artwork
+          h4(style='color:white') About
+          p(style='color:white') Tate is an executive non-departmental public body and an exempt charity. Its mission is to increase the public’s enjoyment and understanding of British art from the 16th century to the present day and of international modern and contemporary art
       
 
         .col-md-4.col-sm-4
-          h5 Contact Us
+          h4(style='color:white') Contact Us
           form.form-horizontal
             .form-group
               .col-md-10
@@ -60,13 +53,13 @@ html(style='min-height: 100%;position: relative;')
                 button.btn.btn-default(type='button') Cancel
                 button.btn.btn-primary(type='submit') Submit
         .col-md-4.col-sm-4
-          h5 Find Us
-          iframe.img-responsive(frameborder='0', style='border:0', src='https://www.google.com/maps/embed/v1/place?q=Eiffel%20Tower%2C%20Avenue%20Anatole%20France%2C%20Paris%2C%20France&key=AIzaSyAFUKSu28KvFk67YcSlUWeUJ2TpcifSVmQ')
+          h4(style='color:white') Find Us
+          iframe.img-responsive(frameborder='0', style='border:0', src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.277258736186!2d-0.09738094899325851!3d51.508129179535345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604a9c77c6bff%3A0xf4267368010a7363!2sBankside%2C+London+SE1%2C+UK!5e0!3m2!1sen!2sie!4v1456662397598')
 
 
 
   script(src="/js/jquery.min.js")
-  script(src='/js/bootstrap.js')
+  script(src='http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js')
   script(src='/js/ripples.js')
   script(src='/js/material.js')
   script(src='/js/core.js')

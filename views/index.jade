@@ -2,22 +2,70 @@ extend layout
 
 block content
     .container-fluid.main(style='height: 100%;')
-      div(style='margin-bottom:100px')
-      .row
-        .col-md-3.col-xs-3.col-sm-3
-        .col-md-6.col-xs-6.col-sm-6
-          each thing in data
-           .list-group
-              .list-group-item
-                .row-picture
-                  img.circle(src='#{thing.url}', alt='icon')
-                .row-content
-                  h4.list-group-item-heading 
-                    a(href='./artist/#{thing.id}') #{thing.fc}
-                    ul
-                      li #{thing.date}
-                      li Gender #{thing.gender}
-                      li Number Of Works #{thing.totalWorks}
-              .list-group-separator
-
-        .col-md-6.col-xs-6.col-sm-6
+      .banner
+        #myCarousel.carousel.slide(data-ride='carousel')
+          ol.carousel-indicators
+            li.active(data-target='#myCarousel', data-slide-to='0')
+            li(data-target='#myCarousel', data-slide-to='1')
+            li(data-target='#myCarousel', data-slide-to='2')
+            li(data-target='#myCarousel', data-slide-to='3')
+          .carousel-inner(role='listbox')
+            .item
+              img(src='http://www.tate.org.uk/art/images/work/T/T12/T12906_10.jpg', alt='Chania')
+            .item
+              img(src='http://www.tate.org.uk/art/images/work/T/T12/T12906_10.jpg', alt='Chania')
+            .item.active
+              img(src='http://www.tate.org.uk/art/images/work/T/T12/T12906_10.jpg', alt='Chania')
+            .item
+              img(src='http://www.tate.org.uk/art/images/work/T/T12/T12906_10.jpg', alt='Chania')
+      .row(style='margin-top: 50px;')
+        .col-md-4.col-sm-4
+          .panel.panel-danger
+            .panel-heading
+              h3.panel-title Featured Artist
+            .panel-body
+              each thing in artists
+                .list-group.nothide
+                  .list-group-item
+                    .row-picture
+                      img.circle(src='#{thing.url}', alt='icon')
+                    .row-content
+                      h4.list-group-item-heading 
+                        a(href='./artist/#{thing.id}') #{thing.fc}
+                  .list-group-separator
+                  
+                  
+        .col-md-4.col-sm-4
+          .panel.panel-danger
+            .panel-heading
+              h3.panel-title Featured Artist
+            .panel-body
+              each thing in artworks
+                .list-group.nothide
+                  .list-group-item
+                    .row-picture
+                      img.circle(src='#{thing.thumbnailUrl}', alt='icon')
+                    .row-content
+                      p
+                        a(href='./artworks/#{thing.id}') #{thing.title}
+                  .list-group-separator
+                  
+                  
+                  
+                  
+        .col-md-4.col-sm-4
+          .panel.panel-warning
+            .panel-heading
+              h3.panel-title About
+            .panel-body
+              ol
+                li
+                  a(href='http://teamwork.com/projects') Projects
+                li
+                  a(href='http://teamwork.com/chat') Chat
+                li
+                  a(href='http://teamwork.com/desk') Desk
+                li
+                  a(href='') Deveolper Docs
+                li
+                  a(href='') Desk Docs

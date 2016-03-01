@@ -18,7 +18,8 @@
         "mongobackup": "",
         "request": "*",
         "mongo-fast-join": "*",
-        "async": "*"
+        "async": "*",
+        "bootstrap": "4.0.0-alpha.2"
     },
     "description": "A complete sample project for Front-End developers teaching the basics of REST and using them to build an easy, fast, single-page web app.",
     "main": "app.js",

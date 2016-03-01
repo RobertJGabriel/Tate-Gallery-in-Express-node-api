@@ -52,6 +52,8 @@ router.get('/artists', function (req, res) {
         var dataGram = JSON.parse(body);
         res.render('artists', {
             title: 'Home',
+            heading: "Tate Gallery ",
+            subheading: "sssss",
             data: dataGram
         })
     });
@@ -82,6 +84,8 @@ router.get('/artist/:id', function (req, res) {
     ], function (err, artist, artwork) {
         res.render('artist', {
             title: artist[0].fc,
+            heading: artist[0].fc,
+            subheading: "sssss",
             artists: artist,
             artworks: artwork
         })
@@ -100,6 +104,8 @@ router.get('/artworks', function (req, res) {
         var dataGram = JSON.parse(body);
         res.render('artworks', {
             title: 'Artworks',
+            heading: 'All the Artworks Tate Gallery',
+            subheading: 'Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.',
             data: dataGram
         })
     });
@@ -137,6 +143,8 @@ router.get('/artworks/:id', function (req, res) {
     ], function (err, artwork, artist) {
         res.render('artwork', {
             title: artwork[0].title,
+            heading: artwork[0].title,
+            subheading: artwork[0].creditLine,
             artwork: artwork,
             artist: artist
         })

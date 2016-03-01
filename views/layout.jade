@@ -1,34 +1,49 @@
 doctype html
-html(style='min-height: 100%;position: relative;')
+html
   head
     title #{title}
+    link(rel='stylesheet', href='http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css')
     link(rel='stylesheet', href='/css/style.css')
-    link(rel='stylesheet', href='/css/ripples.min.css')
+    
+    
     block extra-css
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   body
-    .navbar.navbar-warning.navbar-fixed-top(role='navigation')
+    #navbar-header.navbar-collapse.collapse.inverse
       .container-fluid
-        .navbar-header
-          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-responsive-collapse')
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-          a.navbar-brand(href='/')
-           Tate Gallery
-        .navbar-collapse.collapse.navbar-responsive-collapse
-          form.navbar-form.navbar-left
-            .form-group
-              input.form-control.col-md-8(type='text', name="gamerTag", placeholder='Search')
-          ul.nav.navbar-nav.navbar-right
+        .about
+          h4 #{heading}
+          p.text-muted
+            | #{subheading}
+        .social
+          h4 Contact
+          ul.list-unstyled
             li
-              a(href='/artists') Artists
+              a(href='#') Follow on Twitter
             li
-              a(href='/artworks') Artworks
+              a(href='#') Like on Facebook
+            li
+              a(href='#') Email me
+              
+    .navbar.navbar-static-top.navbar-dark.bg-inverse
+      .container-fluid
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbar-header')
+          | ☰
+        a.navbar-brand(href='/') Tate Gallery
 
-    .container(style='min-height: 100vh;')
-      block content
+
+
+
+
+    section.jumbotron.text-xs-center
+      .container
+        h1.jumbotron-heading #{heading}
+        p.lead.text-muted #{subheading}
+          
+          
+          
+    block content
     footer.footer
       .container-fluid
         .row(style='margin-left:0px;margin-right:0px;padding-bottom: 40px;')
@@ -86,9 +101,10 @@ html(style='min-height: 100%;position: relative;')
 
 
 
-  script(src="/js/jquery.min.js")
-  script(src='http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js')
-  script(src='/js/ripples.js')
-  script(src='/js/material.js')
+  script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
+  script(src="http://v4-alpha.getbootstrap.com/assets/js/vendor/holder.min.js")
   script(src='/js/core.js')
+  script(src='http://v4-alpha.getbootstrap.com/dist/js/bootstrap.min.js')
+
+
   block extra-scripts

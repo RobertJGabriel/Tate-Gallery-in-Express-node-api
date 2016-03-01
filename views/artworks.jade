@@ -2,15 +2,12 @@ extend layout
 
 block content
     // Page Content
-    .container(style='height: 100%;margin-top:100px')
-      each thing in data
-        .row(style='margin-bottom:40px;margin-top:40px')
-          .col-md-7
-            a(href='#')
-              img.img-responsive(src='#{thing.thumbnailUrl}', alt='')
-          .col-md-5
-            h3 #{thing.title}
-            h4 #{thing.dimensions}
-            p  #{thing.creditLine}
-            a.btn.btn-primary(href='./artworks/#{thing.id}')
-              | View Artwork
+    .album.text-muted
+      .container
+        .row
+          each thing in data
+            .card
+              img( data-src="holder.js/100px280/thumb" src='#{thing.thumbnailUrl}', alt='Card image cap')
+              p.card-text #{thing.creditLine}
+              a.btn.btn-primary(href='/artworks/#{thing.id}')
+               | View Artwork

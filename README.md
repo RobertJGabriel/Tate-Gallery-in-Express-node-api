@@ -1,12 +1,6 @@
-#Creating a Simple RESTful Web App with Node.js, Express, and MongoDB
+#Tate Gallery In Node
 
-A complete sample project for Front-End developers teaching the basics of REST and using them to build an easy, fast, single-page web app.
-
-## Quickstart
-
-[Visit the tutorial online](http://cwbuecheler.com/web/tutorials/2014/restful-web-app-node-express-mongodb/), follow along with it, write your own code, compare it to this working sample code.
-
-**Note: If you want to run this sample code, you will need to do an NPM Install, as the node_modules directory has been removed from the repo.**
+Using the likes of Node, express, angular.js and mongodb.
 
 
 ## Contents
@@ -15,7 +9,7 @@ A complete sample project for Front-End developers teaching the basics of REST a
 * /routes - route files for tutorial project
 * /views - views for tutorial project
 * README.md - this file
-* app.js - central app file for tutorial project
+* server.js - central app file for tutorial project
 * package.json - package info for tutorial project
 
 
@@ -24,4 +18,4 @@ A complete sample project for Front-End developers teaching the basics of REST a
 
 1. mongod --dbpath /Users/robertgabriel/Documents/College/Advanced_Javascript/tategallery/data 
 2. mongoimport --db assesstment --collection artworks --drop --file /Users/robertgabriel/Documents/College/Advanced_Javascript/tategallery/public/json/artworks.json
-3. mongoimport --db assesstment --collection artworks --drop --file /Users/robertgabriel/Documents/College/Advanced_Javascript/tategallery/public/json/artworks.json
+3. mongoimport --db assesstment --collection artists --drop --file /Users/robertgabriel/Documents/College/Advanced_Javascript/tategallery/public/json/artists.json

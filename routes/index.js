@@ -30,6 +30,8 @@ router.get('/', function (req, res) {
     ], function (err, artist, artwork) {
         res.render('index', {
             title: "Tate Gallery",
+            heading: "Welcome to Tate Gallery ",
+            subheading: "Donate £5 today to receive a digital artwork exclusively created by John Baldessari as a ‘thank you’ for donating to the new Tate Modern. Your donation will help go towards funding the new Tate Modern, including workshops and events, school visits and resources to help fulfil our mission to make art accessible to everyone",
             artists: artist,
             artworks: artwork
         })
@@ -52,8 +54,8 @@ router.get('/artists', function (req, res) {
         var dataGram = JSON.parse(body);
         res.render('artists', {
             title: 'Home',
-            heading: "Tate Gallery ",
-            subheading: "sssss",
+            heading: 'All the Artworks Tate Gallery',
+            subheading: 'Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.',
             data: dataGram
         })
     });
@@ -63,8 +65,7 @@ router.get('/artist/:id', function (req, res) {
     var artistId = req.params.id;
     async.waterfall([
         function (callback) {
-            request("http://localhost:3000/v1/artists/" + req.params
-                .id,
+            request("http://localhost:3000/v1/artists/" + req.params.id,
                 function (err, response, body) {
                     var artist = JSON.parse(body);
                     callback(null, artist);
@@ -85,7 +86,7 @@ router.get('/artist/:id', function (req, res) {
         res.render('artist', {
             title: artist[0].fc,
             heading: artist[0].fc,
-            subheading: "sssss",
+            subheading: "Born " + artist[0].birthYear + " \n\n" + artist[0].totalWorks + " peices of works",
             artists: artist,
             artworks: artwork
         })

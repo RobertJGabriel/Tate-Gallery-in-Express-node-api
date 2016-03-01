@@ -1,7 +1,7 @@
 extend layout
 
 block content
-    .container-fluid.main(style='height: 100%;')
+    .container-fluid.main.album(style='height: 100%;')
       div(style='margin-bottom:100px')
       h2=eee
       .row
@@ -10,23 +10,25 @@ block content
           each thing in artists
            .list-group
               .list-group-item
-                .row-picture
-                  img.circle(src='#{thing.url}', alt='icon')
                 .row-content
-                  h4.list-group-item-heading #{thing.fc}
+                  h4.list-group-item-heading Facts
                     ul
-                      li #{thing.date}
+                      li Born #{thing.birthYear}
                       li Gender #{thing.gender}
                       li Number Of Works #{thing.totalWorks}
               .list-group-separator
-          each thing2 in artworks
-           .list-group
-              .list-group-item
-                .row-picture
-                  img.circle(src='#{thing2.thumbnailUrl}', alt='icon')
-                .row-content
-                  a(href='/artworks/#{thing2.id}') #{thing2.title}
-    
+          .album
+            .container
+              .row
+                each thing2 in artworks
+                  .card
+                    img.img-responsive( src='#{thing2.thumbnailUrl}', alt='Card image cap')(style='min-height: 170px !important;height:170px !important;')
+                    p.card-text #{thing2.creditLine}
+                    a.btn.btn-primary(href='/artworks/#{thing2.id}') Learn More
+          
               .list-group-separator
 
         .col-md-6.col-xs-6.col-sm-6
+        
+        
+ 

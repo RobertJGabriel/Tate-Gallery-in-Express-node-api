@@ -2,19 +2,14 @@
 extend layout
 
 block content
-    .container-fluid.main(style='height: 100%;')
-      div(style='margin-bottom:100px')
-      .row
-        .col-md-4.col-xs-4.col-sm-4
-        .col-md-4.col-xs-4.col-sm-4
+    // Page Content
+    .album.text-muted
+      .container
+        .row
           each thing in data
-           .panel.panel-default
-              .panel-body
-                img.circle(src='#{thing.url}', alt='icon')
-              .panel-footer
-                h4 
-                  a(href='./artist/#{thing.id}') #{thing.fc}
-
-        .col-md-4.col-xs-4.col-sm-4
-        
-        
+            .card
+              img.img-responsive( data-src="holder.js/100px280/?text=#{thing.fc}" src='', alt='Card image cap')
+              p.card-text #{thing.fc}  was born as a #{thing.gender} unlike Bruce Jenner. #{thing.fc} has #{thing.totalWorks} peices of work.
+              a.btn.btn-primary(href='/artist/#{thing.id}')
+               | Read more
+            

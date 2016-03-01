@@ -7,7 +7,7 @@ block content
         .row
           each thing in data
             .card
-              img( data-src="holder.js/100px280/thumb" src='#{thing.thumbnailUrl}', alt='Card image cap')
+              img.img-responsive( data-src="holder.js/100px280/thumb" src='#{thing.thumbnailUrl}', alt='Card image cap')
               p.card-text #{thing.creditLine}
               a.btn.btn-primary(href='/artworks/#{thing.id}')
                | View Artwork

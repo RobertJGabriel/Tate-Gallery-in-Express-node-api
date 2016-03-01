@@ -1,6 +1,5 @@
-#Tate Gallery In Node
 
-![alt text](https://github.com/RobertJGabriel/Robin/blob/master/assets/img/banner/readme.jpg "Robin")
+![alt text](https://github.com/RobertJGabriel/Tate-Gallery-in-Express-node-api/blob/master/public/img/github/readme.png "Robin")
 
 Using the likes of Node, express, angular.js and mongodb.
 

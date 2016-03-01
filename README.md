@@ -1,5 +1,7 @@
 #Tate Gallery In Node
 
+![alt text](https://github.com/RobertJGabriel/Robin/blob/master/assets/img/banner/readme.jpg "Robin")
+
 Using the likes of Node, express, angular.js and mongodb.
 
 

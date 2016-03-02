@@ -1,0 +1,86 @@
+//colors
+$color_tuna_approx: #373a3c;
+$color_scarpa_flow_approx: #55595c;
+$color_oslo_gray_approx: #818a91;
+$color_gallery_approx: #eceeef;
+$white: #fff;
+$color_black_haze_approx: #f7f7f7;
+.card {
+    float: left;
+    width: 33.333%;
+    padding: .75rem;
+    margin-bottom: 2rem;
+    border: 0;
+    > img {
+        max-width: 356px !important;
+        max-height: 280px !important;
+        min-height: 280px !important;
+        width: 100% !important;
+        height: 100% !important;
+        margin-bottom: .75rem;
+    }
+}
+footer {
+    background-color: $color_tuna_approx;
+    margin-top: 50px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    p {
+        margin-bottom: .25rem;
+    }
+}
+body {
+    min-height: 75rem;
+}
+.navbar {
+    margin-bottom: 0;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+}
+.navbar-collapse {
+    .container-fluid {
+        padding: 2rem 2.5rem;
+    }
+    h4 {
+        color: $color_oslo_gray_approx;
+    }
+    .text-muted {
+        color: $color_oslo_gray_approx;
+    }
+}
+.about {
+    float: left;
+    max-width: 30rem;
+    width: 200px;
+    margin-right: 3rem;
+}
+.jumbotron {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    margin-bottom: 0;
+    .container {
+        max-width: 40rem;
+    }
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+.jumbotron-heading {
+    font-weight: 300;
+}
+.album {
+    min-height: 50rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: $color_black_haze_approx;
+}
+.card-text {
+    font-size: 85%;
+}
+.social a {
+    font-weight: 500;
+    color: $color_gallery_approx;
+    &:hover {
+        color: $color_tuna_approx;
+    }
+}

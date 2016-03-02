@@ -5,7 +5,12 @@ var async = require('async');
 
 
 
-/* GET home page. */
+/**
+ * Rend page for Homepage
+ * @param {Objects} req 
+ * @param {Objects} res
+ * @return {none} Json and jade file
+ */
 router.get('/', function (req, res) {
 
     async.waterfall([
@@ -18,7 +23,6 @@ router.get('/', function (req, res) {
         },
         function (artist, callback) {
             try {
-                console.log(artist);
                 request("http://" + req.headers.host + "/v1/artworks/",
                     function (err, response,
                         body) {
@@ -47,7 +51,12 @@ router.get('/', function (req, res) {
 
 
 
-/* GET home page. */
+/**
+ * Rend page for All Artists
+ * @param {Objects} req 
+ * @param {Objects} res
+ * @return {none} Json and jade file
+ */
 router.get('/artists', function (req, res) {
     var url = "http://" + req.headers.host + "/v1/artists/";
     request(url, function (err, response, body) {
@@ -60,7 +69,15 @@ router.get('/artists', function (req, res) {
         })
     });
 });
-/* GET home page. */
+
+
+
+/**
+ * Rend page for Artist by there Id
+ * @param {Objects} req 
+ * @param {Objects} res
+ * @return {none} Json and jade file
+ */
 router.get('/artist/:id', function (req, res) {
     var artistId = req.params.id;
     async.waterfall([
@@ -73,7 +90,6 @@ router.get('/artist/:id', function (req, res) {
         },
         function (artist, callback) {
             try {
-                console.log(artist);
                 request("http://localhost:3000/v1/artworks/findartist/" + req.params.id,
                     function (err, response,
                         body) {
@@ -98,7 +114,12 @@ router.get('/artist/:id', function (req, res) {
 
 
 
-/* GET home page. */
+/**
+ * Rend page for All Artworks
+ * @param {Objects} req 
+ * @param {Objects} res
+ * @return {none} Json and jade file
+ */
 router.get('/artworks', function (req, res) {
     var url = "http://" + req.headers.host + "/v1/artworks/";
     request(url, function (err, response, body) {
@@ -116,7 +137,12 @@ router.get('/artworks', function (req, res) {
 
 
 
-/* GET home page. */
+/**
+ * Rend page artworks by id
+ * @param {Objects} req 
+ * @param {Objects} res
+ * @return {none} Json and jade file
+ */
 router.get('/artworks/:id', function (req, res) {
     var artworkId = req.params.id;
     async.waterfall([

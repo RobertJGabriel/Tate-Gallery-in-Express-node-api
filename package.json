@@ -13,13 +13,15 @@
         "jade": "~1.9.2",
         "morgan": "~1.5.3",
         "serve-favicon": "~2.2.1",
+        "gulp": "*",
         "mongodb": "~2.0.33",
         "monk": "~1.0.1",
         "mongobackup": "",
         "request": "*",
         "mongo-fast-join": "*",
         "async": "*",
-        "bootstrap": "4.0.0-alpha.2"
+        "bootstrap": "4.0.0-alpha.2",
+        "gulp-sass ": "*"
     },
     "description": "A complete sample project for Front-End developers teaching the basics of REST and using them to build an easy, fast, single-page web app.",
     "main": "app.js",

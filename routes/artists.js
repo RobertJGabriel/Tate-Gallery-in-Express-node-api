@@ -2,8 +2,12 @@ var express = require('express');
 var router = express.Router();
 
 
-/*
- * GET userlist.
+/**
+ * Get All Artists from the database
+ * @param {Objects} req 
+ * @param {Objects} res 
+ * @param {int} ArtistId 
+ * @return {none} none
  */
 router.get('/', function (req, res) {
     var db = req.db;
@@ -19,6 +23,13 @@ router.get('/', function (req, res) {
 });
 
 
+/**
+ * Get Artist by Id
+ * @param {Objects} req 
+ * @param {Objects} res 
+ * @param {int} ArtistId 
+ * @return {none} none
+ */
 router.get('/:id', function (req, res) {
 
     var artistId = req.params.id;

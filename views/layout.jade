@@ -2,20 +2,61 @@ doctype html
 html
   head
     title #{title}
-    link(rel='stylesheet', href='http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css')
-    link(rel='stylesheet', href='/css/style.css')
+    link(rel='stylesheet', href='/css/bootstrap.css')
     
     
     block extra-css
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  body
+  body(ng-app="tate" ng-controller="controller" data-ng-init="init()")
     #navbar-header.navbar-collapse.collapse.inverse
       .container-fluid
         .about
-          h4 #{heading}
-          p.text-muted
-            | #{subheading}
+          ul#pick_colors
+            li
+              span#_7F8C8D.colors(ng-click="setColor('#7F8C8D')")
+                span(ng-if="theme[0][0]['color'] === '#7F8C8D'")
+                  i.mdi-action-done
+            li
+              span#_95A5A6.colors(ng-click="setColor('#95A5A6')")
+                span(ng-if="theme[0][0]['color'] === '#95A5A6'")
+                  i.mdi-action-done
+            li
+              span#_BDC3C7.colors(ng-click="setColor('#BDC3C7')")
+                span(ng-if="theme[0][0]['color'] === '#BDC3C7'")
+                  i.mdi-action-done
+            li
+              span#_C0392B.colors(ng-click="setColor('#C0392B')")
+                span(ng-if="theme[0][0]['color'] === '#C0392B'")
+                  i.mdi-action-done
+            li
+              span#_E74C3C.colors(ng-click="setColor('#E74C3C')")
+                span(ng-if="theme[0][0]['color'] === '#E74C3C'")
+                  i.mdi-action-done
+            li
+              span#_F39C12.colors(ng-click="setColor('#F39C12')")
+                span(ng-if="theme[0][0]['color'] === '#F39C12'")
+                  i.mdi-action-done
+            li
+              span#_F1C40F.colors(ng-click="setColor('#F1C40F')")
+                span(ng-if="theme[0][0]['color'] === '#F1C40F'")
+                  i.mdi-action-done
+            li
+              span#_8E44AD.colors(ng-click="setColor('#8E44AD')")
+                span(ng-if="theme[0][0]['color'] === '#8E44AD'")
+                  i.mdi-action-done
+            li
+              span#_CA2C68.colors(ng-click="setColor('#CA2C68')")
+                span(ng-if="theme[0][0]['color'] === '#CA2C68'")
+                  i.mdi-action-done
+            li
+              span#_EA4C88.colors(ng-click="setColor('#EA4C88')")
+                span(ng-if="theme[0][0]['color'] === '#EA4C88'")
+                  i.mdi-action-done
+            li
+              span#_2C3E50.colors(ng-click="setColor('#2C3E50')")
+                span(ng-if="theme[0][0]['color'] === '#2C3E50'")
+                  i.mdi-action-done
         .social
           h4 Section
           ul.list-unstyled
@@ -26,7 +67,7 @@ html
             li
               a(href='/') Home
               
-    .navbar.navbar-static-top.navbar-dark.bg-inverse
+    .navbar.navbar-static-top.navbar-dark.bg-inverse(ng-style="themeStyle",style="border-radius:0;")
       .container-fluid
         button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbar-header')
           | ☰
@@ -102,9 +143,10 @@ html
 
 
   script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
+  script(src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js")
   script(src="http://v4-alpha.getbootstrap.com/assets/js/vendor/holder.min.js")
   script(src='/js/core.js')
-  script(src='http://v4-alpha.getbootstrap.com/dist/js/bootstrap.min.js')
+  script(src='/js/bootstrap.min.js')
 
 
   block extra-scripts

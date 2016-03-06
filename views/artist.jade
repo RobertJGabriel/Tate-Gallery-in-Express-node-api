@@ -1,22 +1,23 @@
 extend layout
 
 block content
-    .container-fluid.main.album(style='height: 100%;')
-      div(style='margin-bottom:100px')
-      h2=eee
+    .container-fluid.main.album(style='height: 100%;padding-top:40px')
       .row
         .col-md-3.col-xs-3.col-sm-3
         .col-md-6.col-xs-6.col-sm-6
+          h3 Facts
           each thing in artists
-           .list-group
+           .list-group(style='margin-bottom:40px')
               .list-group-item
                 .row-content
-                  h4.list-group-item-heading Facts
                     ul
-                      li Born #{thing.birthYear}
+                      li Year of Birth #{thing.birthYear}
                       li Gender #{thing.gender}
                       li Number Of Works #{thing.totalWorks}
+                      li Born #{thing.birth.place.name}
+                        
               .list-group-separator
+          h3 Artworks      
           .album
             .container
               .row

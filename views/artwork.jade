@@ -1,7 +1,7 @@
 extend layout
 
 block content
-    .container-fluid.main.album
+    .container-fluid.main.album(style="padding-top:60px")
       .row
         .col-md-3.col-xs-3.col-sm-3
         .col-md-6.col-xs-6.col-sm-6
@@ -30,7 +30,7 @@ block content
                 each thing2 in artist
                   .card
                     img.img-responsive( data-src="holder.js/100px280/?text=#{thing2.fc}", alt='Card image cap')(style='min-height: 170px !important;height:170px !important;')
-                    a.btn.btn-primary(href='/artworks/#{thing2.id}') Learn More
+                    a.btn.btn-primary(href='/artist/#{thing2.id}') Learn More
           
               .list-group-separator
 

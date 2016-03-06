@@ -2,12 +2,12 @@ extend layout
 
 block content
     // Page Content
-    .album.text-muted
+    .album.text-muted(style="padding-top:60px")
       .container
         .row
           each thing in data
             .card
-              img.img-responsive( data-src="holder.js/100px280/thumb" src='#{thing.thumbnailUrl}', alt='Card image cap')
+              img.img-responsive( height=" 280px", width="100%", display="block",data-src="holder.js/289px280/thumb" src='#{thing.thumbnailUrl}', alt='Card image cap')
               p.card-text #{thing.creditLine}
               a.btn.btn-primary(href='/artworks/#{thing.id}')
                | View Artwork

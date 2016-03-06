@@ -2039,7 +2039,8 @@ input[type="button"].btn-block {
   width: 33.333%;
   padding: .75rem;
   margin-bottom: 2rem;
-  border: 0; }
+  border: 0 !important;
+  border-radius: 0 !important; }
   .card > img {
     max-width: 356px !important;
     max-height: 280px !important;
@@ -2050,7 +2051,6 @@ input[type="button"].btn-block {
 
 footer {
   background-color: #373a3c;
-  margin-top: 50px;
   padding-top: 3rem;
   padding-bottom: 3rem; }
   footer p {
@@ -2079,9 +2079,10 @@ body {
   margin-right: 3rem; }
 
 .jumbotron {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-  margin-bottom: 0; }
+  padding-top: 6rem !important;
+  padding-bottom: 6rem !important;
+  margin-bottom: 0 !important;
+  background-color: white !important; }
   .jumbotron .container {
     max-width: 40rem; }
   .jumbotron p:last-child {
@@ -2092,7 +2093,6 @@ body {
 
 .album {
   min-height: 50rem;
-  padding-top: 3rem;
   padding-bottom: 3rem;
   background-color: #f7f7f7; }
 
@@ -2101,7 +2101,7 @@ body {
 
 .social a {
   font-weight: 500;
-  color: #eceeef; }
+  color: #000; }
   .social a:hover {
     color: #373a3c; }
 

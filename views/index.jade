@@ -4,19 +4,14 @@ block content
     .container-fluid.main.album(style='height: 100%;')
       .row(style='margin-top: 50px;padding-top:50px;')
         .col-md-4.col-sm-4
-          .panel
-            .panel-heading
+          .album
+            .container
               h3.panel-title Featured Artists
-            .panel-body
               each thing in artists
-                .list-group.nothide
-                  .list-group-item
-                    .row-picture
-                      img.circle(data-src="holder.js/100px280/?text=#{thing.fc}", alt='icon')
-                    .row-content
-                      h4.list-group-item-heading 
-                        a.btn.btn-primary(href='./artist/#{thing.id}') Learn More
-                  .list-group-separator
+                .card2
+                  img.circle(data-src="holder.js/100px280/?text=#{thing.fc}", alt='icon')
+                  h4.list-group-item-heading 
+                  a.btn.btn-primary(href='./artist/#{thing.id}',style=" width: 100%;") Learn More
                 
         .col-md-8.col-sm-8
           .album
@@ -26,7 +21,7 @@ block content
               each thing in artworks
                 .card
                   img.img-responsive(src='#{thing.thumbnailUrl}', alt='Card image cap')
-                  a.btn.btn-primary(href='/artworks/#{thing.id}') Learn More   
+                  a.btn.btn-primary(href='/artworks/#{thing.id}',style=" width: 100%;") Learn More   
 
                   
                   

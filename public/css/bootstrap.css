@@ -2049,6 +2049,21 @@ input[type="button"].btn-block {
     height: 100% !important;
     margin-bottom: .75rem; }
 
+.card2 {
+  float: left;
+  width: 50%;
+  padding: .75rem;
+  margin-bottom: 2rem;
+  border: 0 !important;
+  border-radius: 0 !important; }
+  .card2 > img {
+    max-width: 356px !important;
+    max-height: 120px !important;
+    min-height: 120px !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin-bottom: .75rem; }
+
 footer {
   background-color: #373a3c;
   padding-top: 3rem;

@@ -21,6 +21,22 @@ $color_black_haze_approx: #f7f7f7;
         margin-bottom: .75rem;
     }
 }
+.card2 {
+    float: left;
+    width: 50%;
+    padding: .75rem;
+    margin-bottom: 2rem;
+    border: 0 !important;
+    border-radius: 0 !important;
+    > img {
+        max-width: 356px !important;
+        max-height: 120px !important;
+        min-height: 120px !important;
+        width: 100% !important;
+        height: 100% !important;
+        margin-bottom: .75rem;
+    }
+}
 footer {
     background-color: $color_tuna_approx;
     padding-top: 3rem;

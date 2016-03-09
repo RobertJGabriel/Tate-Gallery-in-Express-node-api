@@ -6,7 +6,7 @@ block content
         .col-md-4.col-sm-4
           .album
             .container
-              h3.panel-title Featured Artists
+              h3.panel-title.simple Featured Artists
               each thing in artists
                 .card2
                   img.circle(data-src="holder.js/100px280/?text=#{thing.fc}", alt='icon')
@@ -16,7 +16,7 @@ block content
         .col-md-8.col-sm-8
           .album
             .container
-              h3 Featured Artwork
+              h3.simple Featured Artwork
               .row
               each thing in artworks
                 .card

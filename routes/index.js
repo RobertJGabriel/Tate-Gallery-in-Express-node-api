@@ -46,11 +46,6 @@ router.get('/', function (req, res) {
 
 
 
-
-
-
-
-
 /**
  * Rend page for All Artists
  * @param {Objects} req 
@@ -63,7 +58,7 @@ router.get('/artists', function (req, res) {
         var dataGram = JSON.parse(body);
         res.render('artists', {
             title: 'Home',
-            heading: 'All the Artworks Tate Gallery',
+            heading: 'All the Artists Tate Gallery',
             subheading: 'Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.',
             data: dataGram
         })

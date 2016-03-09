@@ -3,13 +3,8 @@ var app = angular.module('tate', []);
 app.controller('controller', function ($scope) {
 
 
-    $scope.listOfProfanity = [];
-    $scope.words = [];
-    $scope.loggedin = null;
-    $scope.tabsLimit = 6;
-    $scope.caughtColor = "#7B1FA2";
-    $scope.banndedUrlsList = [];
-    $scope.searchTerm;
+
+
     $scope.themeList = [{
         color: "#F44336",
         active: true
@@ -62,7 +57,6 @@ app.controller('controller', function ($scope) {
         };
     }
 
-
     /**
      * Remove localstorage by key
      * @param {String} Key
@@ -71,9 +65,42 @@ app.controller('controller', function ($scope) {
     $scope.removeLocalStorage = function (key) {
         localStorage.removeItem(key);
     };
+
+
+
+
+
+
+
 });
 
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 8,
+    center: {lat: -34.397, lng: 150.644}
+  });
+  var geocoder = new google.maps.Geocoder();
 
+
+    geocodeAddress(geocoder, map);
+
+}
+
+function geocodeAddress(geocoder, resultsMap) {
+
+  var address = document.getElementById('address').value;
+  geocoder.geocode({'address': address}, function(results, status) {
+    if (status === google.maps.GeocoderStatus.OK) {
+      resultsMap.setCenter(results[0].geometry.location);
+      var marker = new google.maps.Marker({
+        map: resultsMap,
+        position: results[0].geometry.location
+      });
+    } else {
+      alert('Geocode was not successful for the following reason: ' + status);
+    }
+  });
+}
 $("img").error(function () {
     $(this).unbind("error").attr("src", "https://s3.amazonaws.com/uifaces/faces/twitter/rogie/128.jpg");
 });

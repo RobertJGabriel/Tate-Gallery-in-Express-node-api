@@ -1,10 +1,14 @@
 extend layout
 
 block content
+    #floating-panel(style=' display: none;')
+      input#address(type='textbox', value='#{artists[0].birth.place.name}')
+    #map(style='height: 279px;width: 100%;position: absolute;overflow: hidden;margin-top: -279px;position: absolute;z-index: 2;')
     .container-fluid.main.album(style='height: 100%;padding-top:40px')
       .row
         .col-md-3.col-xs-3.col-sm-3
         .col-md-6.col-xs-6.col-sm-6
+
           h3 Facts
           each thing in artists
            .list-group(style='margin-bottom:40px')
@@ -14,7 +18,7 @@ block content
                       li Year of Birth #{thing.birthYear}
                       li Gender #{thing.gender}
                       li Number Of Works #{thing.totalWorks}
-                      li Born #{thing.birth.place.name}
+                      li#born Born #{thing.birth.place.name}
                         
               .list-group-separator
           h3 Artworks      

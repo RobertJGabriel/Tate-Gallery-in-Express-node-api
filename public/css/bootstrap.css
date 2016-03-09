@@ -2087,6 +2087,11 @@ body {
 .navbar-collapse .text-muted {
   color: #818a91; }
 
+.octicon-check {
+  width: 35px !important;
+  height: 35px !important;
+  text-align: center !important; }
+
 .about {
   float: left;
   max-width: 30rem;

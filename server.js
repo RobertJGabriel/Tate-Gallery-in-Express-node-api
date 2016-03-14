@@ -40,8 +40,14 @@ app.use('/v1/artworks', artwork);
 
 app.use(function (req, res, next) {
     var err = new Error('Not Found');
-    err.status = 404;
-    next(err);
+    res.render('error', {
+        title: "Oops!",
+        heading: "Oops!",
+        subheading: " 404 Not Found",
+           
+        message: "404",
+        error: {}
+    });
 });
 
 

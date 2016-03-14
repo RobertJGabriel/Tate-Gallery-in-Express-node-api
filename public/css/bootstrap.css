@@ -2125,6 +2125,16 @@ body {
   .social a:hover {
     color: #373a3c; }
 
+.error-template {
+  padding: 40px 15px;
+  text-align: center; }
+
+.error-actions {
+  margin-top: 15px;
+  margin-bottom: 15px; }
+  .error-actions .btn {
+    margin-right: 10px; }
+
 #_7F8C8D {
   background-color: #7f8c8d; }
 

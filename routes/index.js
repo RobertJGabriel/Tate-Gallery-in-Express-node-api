@@ -60,7 +60,7 @@ router.get('/artists', function (req, res) {
         res.render('artists', {
             title: 'Home',
             heading: 'All the Artists Tate Gallery',
-            subheading: 'Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.',
+            subheading: 'Jade is an American hip hop soul group active during the early to mid-1990s. The group consisted of Tonya Kelly, Joi Marshall, and Di Reed. During their brief yet successful career, Jade released two studio albums, one live album, and a string of popular R&B singles.',
             data: dataGram
         })
     });

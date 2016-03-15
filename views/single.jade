@@ -1,0 +1,74 @@
+extend layout
+
+block content
+    if type
+      #floating-panel(style=' display: none;')
+        input#address(type='textbox', value='#{artists[0].birth.place.name}')
+      #map(style='height: 274px;width: 100%;position: absolute;overflow: hidden;margin-top: -274px;margin-bottom: -24px;position: absolute;z-index: 2;')
+
+
+    .container-fluid.main.album(style='height: 100%;padding-top:60px')
+      .row
+        .col-md-3
+        .col-md-6
+          if type
+            h3 Facts
+            each thing in artists
+             .list-group(style='margin-bottom:40px')
+                .list-group-item
+                  .row-content
+                      ul
+                        li Year of Birth #{thing.birthYear}
+                        li Gender #{thing.gender}
+                        li Number Of Works #{thing.totalWorks}
+                        li#born Born #{thing.birth.place.name}
+                    if thing.url != null  
+                      a.btn.btn-raised.btn-primary(href='#{thing.url}') View Site
+      
+                .list-group-separator
+            h3 Artworks      
+            .album
+              .container
+                .row
+                  each thing2 in artworks
+                    .card
+                      img.img-responsive( src='#{thing2.thumbnailUrl}', alt='Card image cap')(style='min-height: 170px !important;height:170px !important;')
+                      p.card-text #{thing2.creditLine}
+                      a.btn.btn-primary(href='/artworks/#{thing2.id}',style=" width: 100%;") Learn More
+          
+          else if !type
+            each thing in artwork
+             .list-group
+                .list-group-item
+                  .row-content
+                    img.img-responsive( src="#{thing.thumbnailUrl}" )(style='width: 100%;')
+                    br
+                    br
+                    h4.list-group-item-heading Facts
+                    ul
+                      li  Title: #{thing.title}
+                      li #{thing.creditLine}
+                      li Dimensions #{thing.dimensions}
+                      li Acquisition Year  #{thing.acquisitionYear} 
+                    if thing.url != null  
+                      a.btn.btn-raised.btn-primary(href='#{thing.url}') View Site
+                .list-group-separator
+            br
+            br
+            br
+            br
+            h1 Artists      
+            .album
+              .container
+                .row
+                  each thing2 in artist
+                    .card
+                      img.img-responsive( data-src="holder.js/100px280/?text=#{thing2.fc}", alt='Card image cap')(style='min-height: 170px !important;height:170px !important;')
+                      a.btn.btn-primary(href='/artist/#{thing2.id}',style=" width: 100%;color: #fff;background-color: green;border-color: green;") Learn More
+
+                .list-group-separator
+
+        .col-md-6
+        
+        
+ 

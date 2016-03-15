@@ -37,6 +37,7 @@ router.get('/', function (req, res) {
             heading: "Welcome to Tate Gallery ",
             subheading: "Donate £5 today to receive a digital artwork exclusively created by John Baldessari as a ‘thank you’ for donating to the new Tate Modern. Your donation will help go towards funding the new Tate Modern, including workshops and events, school visits and resources to help fulfil our mission to make art accessible to everyone",
             artists: artist,
+
             artworks: artwork
         })
     });
@@ -94,9 +95,10 @@ router.get('/artist/:id', function (req, res) {
             } catch (err) {}
         }
     ], function (err, artist, artwork) {
-        res.render('artist', {
+        res.render('single', {
             title: artist[0].fc,
             heading: artist[0].fc,
+            type:true,
             subheading: "Born " + artist[0].birthYear + " \n\n" + artist[0].totalWorks + " peices of works",
             artists: artist,
             artworks: artwork
@@ -163,11 +165,12 @@ router.get('/artworks/:id', function (req, res) {
             } catch (err) {}
         }
     ], function (err, artwork, artist) {
-        res.render('artwork', {
+        res.render('single', {
             title: artwork[0].title,
             heading: artwork[0].title,
             subheading: artwork[0].creditLine,
             artwork: artwork,
+            type:false,
             artist: artist
         })
     });

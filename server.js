@@ -44,7 +44,6 @@ app.use(function (req, res, next) {
         title: "Oops!",
         heading: "Oops!",
         subheading: " 404 Not Found",
-           
         message: "404",
         error: {}
     });
@@ -56,6 +55,9 @@ app.use(function (req, res, next) {
 app.use(function (err, req, res, next) {
     res.status(err.status || 500);
     res.render('error', {
+        title: "WOW!",
+        heading: "WOW",
+        subheading: " Something Happened, better get to work",
         message: err.message,
         error: {}
     });
